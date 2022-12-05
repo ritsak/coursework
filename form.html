@@ -1,0 +1,87 @@
+<!-- create form to accept name , age , email address , from the user  -->
+<!-- create a submit button to send the data  -->
+<!-- the heading of the form should have a background colour and a different font style -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form data</title>
+    <style>
+        html{
+            text-align: center;
+            object-fit: contain;
+        }
+        body{
+            /* background-color: rgb(0, 0, 0); */
+            color: rgb(255, 255, 255);
+            object-fit: contain;
+        
+        }
+        h1{
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        .form{
+            width: 100%;
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            height: 50vh;
+            object-fit: contain;
+        }
+        .form input{
+            width: 50%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .form button{
+            width: 30%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+        }
+        .form button:hover{
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+        .form label {
+            text-align: left;
+            font-weight: 200;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="form">
+        <h1>form data</h1><br>
+        <form action="form.html" method="POST">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required><br>
+            <label for="age">Age</label><br>
+            <input type="number" name="age" id="age" placeholder="Enter your age" required ><br>
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email" placeholder="Enter your email" required><br>
+            <button type="submit" onclick="Submit()">Submit</button>
+        </form>
+
+    </section>
+    <script>
+        const Submit = () => {
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let email = document.getElementById("email").value;
+            if(name === "" || age === "" || email === ""){
+                alert("please fill all the fields");
+            }else{
+            document.write(`Thank you ${name} your data has been submitted successfully`);
+            }
+        }
+    </script>
+</body>
+</html>
