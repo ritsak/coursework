@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const add = ()=>{
+    let num1 =parseFloat(prompt("Enter num1 : "));
+    let num2 =parseFloat(prompt("Enter num2 : "));
+    let result = num1 + num2 ;
+    return result;
+}
+
+const subtract = () => {
+    let num1 =parseFloat(prompt("Enter num1 : "));
+    let num2 =parseFloat(prompt("Enter num2 : "));
+    let result = num1 - num2 ;
+    return result;
+};
+
+const multiply = () => {
+    let num1 =parseFloat(prompt("Enter num1 : "));
+    let num2 =parseFloat(prompt("Enter num2 : "));
+    let result = num1 * num2 ;
+    return result;
+};
+
+const divide = () => {
+    let num1 =parseFloat(prompt("Enter num1 : "));
+    let num2 =parseFloat(prompt("Enter num2 : "));
+    let result = 0;
+    
+    if(num2 === 0){
+        return "cannot divide by zero";
+    }else {
+        result = num1 / num2 ;
+        return result;
+    }
+};
+
+const cal = () => {
+   let operator = prompt("Enter an operator: ");
+    if (operator === '+'){
+        return add();
+    }else if (operator === '-'){
+        return subtract();
+    }else if (operator === '*'){
+        return multiply();
+    }else if (operator === '/'){
+        return divide();
+    }else {
+        return "invalid operator"
+    }
+
+};
+
+document.write(cal());
+    </script>
+</body>
+</html>
